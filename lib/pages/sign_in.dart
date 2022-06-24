@@ -1,6 +1,6 @@
-import 'package:bilimdon_rus/bilimdon.dart';
 import 'package:flutter/material.dart';
 
+import '../lesson_pages/bilimdon.dart';
 import '../models/user.dart';
 import '../services/hive_db.dart';
 import 'sign_up.dart';
@@ -80,12 +80,15 @@ class _SignInState extends State<SignIn> {
                     padding: EdgeInsets.only(left: 10),
                     height: 50,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade400,
+                        border: Border.all(width: 1, color: Colors.white),
+                        color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(40)),
                     child: TextField(
                       controller: _nameC,
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                           border: InputBorder.none,
+                          hintStyle: TextStyle(color: Colors.white),
                           hintText: "Ismi  familiyangizni kiriting"),
                     ),
                   ),
@@ -97,13 +100,16 @@ class _SignInState extends State<SignIn> {
                     padding: EdgeInsets.only(left: 10),
                     height: 50,
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade400,
+                        border: Border.all(width: 1, color: Colors.white),
+                        color: Colors.grey.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(40)),
                     child: TextField(
                       controller: _passwordC,
+                      style: TextStyle(color: Colors.white),
                       keyboardType: TextInputType.visiblePassword,
                       decoration: InputDecoration(
                           border: InputBorder.none,
+                          hintStyle: TextStyle(color: Colors.white),
                           hintText: "Porolni kiriting"),
                     ),
                   ),
@@ -121,7 +127,6 @@ class _SignInState extends State<SignIn> {
                         height: 50,
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
-                            color: Colors.grey.shade400,
                             border: Border.all(color: Colors.white, width: 2),
                             borderRadius: BorderRadius.circular(40)),
                         child: Text(

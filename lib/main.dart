@@ -1,9 +1,10 @@
 import 'package:bilimdon_rus/pages/sign_in.dart';
+import 'package:bilimdon_rus/pages/sign_up.dart';
 import 'package:flutter/material.dart';
 
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'bilimdon.dart';
+import 'lesson_pages/bilimdon.dart';
 
 void main(List<String> args) async {
   await Hive.initFlutter();
@@ -20,7 +21,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: "Bilimdon Rus-tili",
       debugShowCheckedModeBanner: false,
-      home: SignIn(),
+      home: SignUp(),
       routes: {
         Bilimdon.id: (context) => const Bilimdon(),
       },

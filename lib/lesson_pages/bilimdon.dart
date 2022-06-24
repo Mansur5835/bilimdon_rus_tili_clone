@@ -2,9 +2,10 @@ import 'dart:io';
 
 import 'package:bilimdon_rus/pages/profile_page.dart';
 
+import '../models/user.dart';
+import '../services/hive_db.dart';
 import 'dars1Lugat.dart';
 import 'dars2_lugat.dart';
-import 'models/user.dart';
 import 'rusUzMashq1.dart';
 import 'rus_us_mashq2.dart';
 import 'rus_uz_Mashq13.dart';
@@ -23,7 +24,6 @@ import 'rus_uz_mashq6.dart';
 import 'rus_uz_mashq7.dart';
 import 'rus_uz_mashq8.dart';
 import 'rus_uz_mashq9.dart';
-import 'services/hive_db.dart';
 import 'uz_rus_mashq1.dart';
 import 'uz_rus_mashq10.dart';
 import 'uz_rus_mashq11.dart';
@@ -270,7 +270,7 @@ class _BilimdonState extends State<Bilimdon> {
                                               BorderRadius.circular(10),
                                           image: DecorationImage(
                                             image: AssetImage(
-                                                "lib/image/nodir.jpg"),
+                                                "lib/image/i am.png"),
                                             fit: BoxFit.cover,
                                           ),
                                         ),
@@ -307,7 +307,7 @@ class _BilimdonState extends State<Bilimdon> {
                                     Container(
                                         alignment: Alignment(0, 0.7),
                                         child: Text(
-                                          "Dastur muallifi:  Nodirbek Kadamov",
+                                          "Yaratuvchi:  Mansur G`ulomov",
                                           style: TextStyle(
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold),

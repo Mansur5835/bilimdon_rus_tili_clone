@@ -17,6 +17,7 @@ class _InputTextState extends State<InputText> {
   late String isRighttext;
   bool showDialogRorW = false;
   int index = Random().nextInt(16);
+  TextEditingController textEditingController = TextEditingController();
 
   List<Map<String, String>> list = [
     {"Qaysi rangni yaxshi ko`rasiz?": "Какой цвет вы любите?"},
@@ -121,6 +122,7 @@ class _InputTextState extends State<InputText> {
 
   clickButton() {
     setState(() {
+      textEditingController.clear();
       showDialogRorW = true;
     });
   }
@@ -150,6 +152,7 @@ class _InputTextState extends State<InputText> {
               width: MediaQuery.of(context).size.width * 0.7,
               child: TextField(
                 // maxLength: 3,
+                controller: textEditingController,
 
                 maxLines: 2,
                 textCapitalization: TextCapitalization.sentences,
